@@ -3,7 +3,6 @@
 <title>Test</title>
 <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
 <style type='text/css'>
-
 a{
   color:black;
   text-decoration:none;
@@ -165,27 +164,30 @@ float:left;
   margin:auto;
 }
 
-#highlight #list{
-  content: "";
+
+.highlight .list{
+
   display: table;
-  clear: both;
   width:100%;
-  margin:auto;
+  margin:0 auto;
+  vertical-align: middle;
+  text-align:center;
 }
-#highlight .column {
+.highlight .column {
   float: left;
   width: 23%;
   padding: 10px;
   margin:auto;
   display: inline-block;
 }
-#highlight .imagecont{
-
-  width: 100%;
+.highlight .imagecont{
   padding: 10px;
-  margin:auto;
+  width:100%;
 }
-#highlight .imagecont img{
+.highlight .imagecont .productitle{
+  text-align:center;
+}
+.highlight .imagecont img{
   width:200px;
   height:200px;
   border:2px solid #000;
@@ -273,7 +275,7 @@ float:left;
 }
 
 
-#musthave .title, #highlight .title{
+#musthave .title, .highlight .title{
   font-family:Impact;
   border-top:0px solid black;
   border-bottom:6px solid black;
@@ -286,7 +288,7 @@ float:left;
 }
 #footer-wrapper{
   width:100%;
-
+/*  background:#107814;*/
 background:#000;
   padding:10px;
   color:white;
@@ -302,7 +304,7 @@ background:#000;
 .morelink a{
 text-decoration: none;
 color:white;}
-#musthave, #highlight{
+#musthave, .highlight{
   margin-bottom:25px;
 }
 #headlink{
@@ -331,15 +333,16 @@ width:auto;
   .search-container form{
     width:150px;
   }
-  #highlight .imagecont img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #highlight .column {
+  .highlight .column {
     float: left;
     width:44%;
     padding: 10px;
+  }
+
+  .highlight .imagecont img{
+display:block;
+margin-left: auto;
+margin-right: auto;
   }
   #musthave .column {
     float: left;
@@ -358,13 +361,12 @@ width:auto;
     width:150px;
   }
 }
-
 </style>
 </head>
 <body>
 <div id="container">
 <div id="header-wrapper">
-<div id="logo">FURNICRAFT</div>
+<div id="logo"><a href="index.html">FURNICRAFT</a></div>
 <div id="headlink">
   <a href="checkout.html" title="trolley"><i class="fa fa-shopping-cart"></i></a> |
   <a href="login.html"><i class="fa fa-user-circle"></i> Login</a>
@@ -374,7 +376,7 @@ width:auto;
 <div id="menu">
   <div id="left">
   <ul>
-  <li><a class="active" href="#home">Home</a></li>
+  <li><a class="active" href="index.html">Home</a></li>
   <li><a href="#new">Whats New</a></li>
   <li><a href="#furniture">Furniture</a></li>
   <li><a href="#handicraft">Handicraft</a></li>
@@ -414,61 +416,72 @@ width:auto;
 </div>
 <div style="clear:both"/>
 <div id="content-wrapper">
-  <div id="musthave">
-  <div class="title">
-    MUST HAVE
-  </div>
-  <div id="list">
-    <div class="column">
-    <div class="imagecont">
-      <img src="assets/0_498571d3-078b-4afb-9856-961dacaf1f79_720_537.jpg" alt="Cinque Terre"/>
-    <div class="judul">
-      Tes
-    </div>
-    </div>
-    </div>
-    <div class="column">
-    <div class="imagecont">
-      <img src="assets/1_vGzRFsS-oI6i-kFKBbUs3Q.jpeg" alt="Cinque Terre"/>
-    <div class="judul">
-      Tes 1
-    </div>
-    </div>
-    </div>
-  </div>
-  <div class="morelink">
-  <a href="#">MORE &#187;</a>
-  </div>
-  </div>
-  <div style="clear:both"/>
-  <div id="highlight">
+  <div class="highlight">
     <div class="title">
-      HIGHLIGHT
+      PRODUCTS LIST
     </div>
-    <div id="list">
+    <div class="list">
       <div class="column">
       <div class="imagecont">
         <img src="assets/0_498571d3-078b-4afb-9856-961dacaf1f79_720_537.jpg" alt="Cinque Terre"/>
+        <div class="productitle">Mebel Jepara</div>
       </div>
+
       </div>
       <div class="column">
       <div class="imagecont">
         <img src="assets/1_vGzRFsS-oI6i-kFKBbUs3Q.jpeg" alt="Cinque Terre"/>
+        <div class="productitle">Mebel Jogjakarta</div>
       </div>
+
       </div>
       <div class="column">
       <div class="imagecont">
         <img src="assets/62763-furniture-964584_960_720.jpg" alt="Cinque Terre"/>
+        <div class="productitle">Mebel Surakarta</div>
       </div>
+
       </div>
       <div class="column">
       <div class="imagecont">
         <img src="assets/Carissa-round-set.jpg" alt="Cinque Terre"/>
+        <div class="productitle">Mebel Surabaya</div>
       </div>
+
+      </div>
+    </div>
+    <div class="list">
+      <div class="column">
+      <div class="imagecont">
+        <img src="assets/0_498571d3-078b-4afb-9856-961dacaf1f79_720_537.jpg" alt="Cinque Terre"/>
+        <div class="productitle">Mebel Jepara</div>
+      </div>
+
+      </div>
+      <div class="column">
+      <div class="imagecont">
+        <img src="assets/1_vGzRFsS-oI6i-kFKBbUs3Q.jpeg" alt="Cinque Terre"/>
+        <div class="productitle">Mebel Jogjakarta</div>
+      </div>
+
+      </div>
+      <div class="column">
+      <div class="imagecont">
+        <img src="assets/62763-furniture-964584_960_720.jpg" alt="Cinque Terre"/>
+        <div class="productitle">Mebel Surakarta</div>
+      </div>
+
+      </div>
+      <div class="column">
+      <div class="imagecont">
+        <img src="assets/Carissa-round-set.jpg" alt="Cinque Terre"/>
+        <div class="productitle">Mebel Surabaya</div>
+      </div>
+
       </div>
     </div>
     <div class="morelink">
-    <a href="products.html">MORE &#187;</a>
+    <a href="#">MORE &#187;</a>
     </div>
   </div>
 </div>

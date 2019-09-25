@@ -4,10 +4,6 @@
 <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
 <style type='text/css'>
 
-a{
-  color:black;
-  text-decoration:none;
-}
 body{
 margin:auto;
 font-family: Calibri;
@@ -174,14 +170,12 @@ float:left;
 }
 #highlight .column {
   float: left;
-  width: 23%;
+  width: 20%;
   padding: 10px;
-  margin:auto;
-  display: inline-block;
 }
 #highlight .imagecont{
 
-  width: 100%;
+  width: 50%;
   padding: 10px;
   margin:auto;
 }
@@ -273,7 +267,7 @@ float:left;
 }
 
 
-#musthave .title, #highlight .title{
+#musthave .title, #highlight .title, #userdetail-wrapper .title{
   font-family:Impact;
   border-top:0px solid black;
   border-bottom:6px solid black;
@@ -283,10 +277,11 @@ float:left;
   width:300px;
   margin:0;
   text-align:left;
+  margin-bottom:15px;
 }
 #footer-wrapper{
   width:100%;
-
+/*  background:#107814;*/
 background:#000;
   padding:10px;
   color:white;
@@ -331,11 +326,6 @@ width:auto;
   .search-container form{
     width:150px;
   }
-  #highlight .imagecont img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
   #highlight .column {
     float: left;
     width:44%;
@@ -359,6 +349,48 @@ width:auto;
   }
 }
 
+#userdetail-wrapper{
+  width:500px;
+  clear:both;
+
+  margin:auto;
+margin-bottom:10px;
+}
+#userdetail-wrapper table{
+  margin:auto;
+}
+#userdetail-wrapper input{
+width:200px;
+background:none;
+border:0;
+border-bottom:2px solid black;
+height:30px;
+padding:5px;
+color:black;
+margin-bottom:15px;
+}
+#userdetail-wrapper button{
+border:0;
+background:black;
+width:200px;
+height:25px;
+
+}
+#save{
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-right:20px;
+  float:right;
+  display:block;
+}
+#simpanbutton{
+  background: #4CAF50;
+  border:none;
+  padding:10px;
+  font-size:20px;
+  color:white;
+  display:inline-block;
+}
 </style>
 </head>
 <body>
@@ -366,8 +398,8 @@ width:auto;
 <div id="header-wrapper">
 <div id="logo">FURNICRAFT</div>
 <div id="headlink">
-  <a href="checkout.html" title="trolley"><i class="fa fa-shopping-cart"></i></a> |
-  <a href="login.html"><i class="fa fa-user-circle"></i> Login</a>
+  <i class="fa fa-shopping-cart"></i> |
+  <i class="fa fa-user-circle"></i> afriza
 </div>
 </div>
 <div style="clear:both"/>
@@ -414,63 +446,33 @@ width:auto;
 </div>
 <div style="clear:both"/>
 <div id="content-wrapper">
-  <div id="musthave">
-  <div class="title">
-    MUST HAVE
+  <div id="userdetail-wrapper">
+    <div class="title">Data Pengguna</div>
+    <form id="user">
+    <table>
+      <tr>
+        <td>Nama Pengguna</td>
+        <td><input type="text" placeholder="Nama Pengguna" value="afriza"/></td>
+      </tr>
+      <tr>
+        <td>Alamat E-Mail</td>
+        <td><input type="email" placeholder="Alamat Email" value="afriza1@gmail.com"/></td>
+      </tr>
+      <tr>
+        <td>Alamat Rumah</td>
+        <td><input type="text" placeholder="Alamat Rumah" value="Jl. Kaktus 31, Lumajang"/></td>
+      </tr>
+      <tr>
+        <td>Nomor Ponsel</td>
+        <td><input pattern="[0-9]*" value="082938123494" type="number" placeholder="Nomor Ponsel"></td>
+      </tr>
+    </table>
+  </form>
   </div>
-  <div id="list">
-    <div class="column">
-    <div class="imagecont">
-      <img src="assets/0_498571d3-078b-4afb-9856-961dacaf1f79_720_537.jpg" alt="Cinque Terre"/>
-    <div class="judul">
-      Tes
-    </div>
-    </div>
-    </div>
-    <div class="column">
-    <div class="imagecont">
-      <img src="assets/1_vGzRFsS-oI6i-kFKBbUs3Q.jpeg" alt="Cinque Terre"/>
-    <div class="judul">
-      Tes 1
-    </div>
-    </div>
-    </div>
-  </div>
-  <div class="morelink">
-  <a href="#">MORE &#187;</a>
-  </div>
-  </div>
-  <div style="clear:both"/>
-  <div id="highlight">
-    <div class="title">
-      HIGHLIGHT
-    </div>
-    <div id="list">
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/0_498571d3-078b-4afb-9856-961dacaf1f79_720_537.jpg" alt="Cinque Terre"/>
-      </div>
-      </div>
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/1_vGzRFsS-oI6i-kFKBbUs3Q.jpeg" alt="Cinque Terre"/>
-      </div>
-      </div>
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/62763-furniture-964584_960_720.jpg" alt="Cinque Terre"/>
-      </div>
-      </div>
-      <div class="column">
-      <div class="imagecont">
-        <img src="assets/Carissa-round-set.jpg" alt="Cinque Terre"/>
-      </div>
-      </div>
-    </div>
-    <div class="morelink">
-    <a href="products.html">MORE &#187;</a>
-    </div>
-  </div>
+</div>
+<div style="clear:both"/>
+<div id="save">
+ <button type="button" id="simpanbutton">Simpan</button>
 </div>
 <div style="clear:both"/>
 <div id="footer-wrapper">
